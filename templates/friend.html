@@ -1,0 +1,312 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ja">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FRIEND</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}s">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+
+    <!-- google fonts -->
+    <!-- header -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@700&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <!-- accountname -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+
+    <!-- jQuery本体 CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+
+    <!-- jQuery実行ファイル -->
+    <!-- <script type="text/javascript" src="js/common.js"></script> -->
+
+  </head>
+
+  <body>
+
+    <div id="wrap">
+
+      <nav>
+        <h1>
+          Discover Artists
+        </h1>
+        <ul>
+          <li>
+            <a href="{% url 'myapp:home' %}">
+              <span class="material-icons-outlined">
+                home
+              </span>
+              <p>ホーム</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:artist' %}">
+              <span class="material-icons-outlined">
+                sentiment_very_satisfied
+              </span>
+              <p>TL</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:recommend' %}">
+              <span class="material-icons">
+                manage_search
+              </span>
+              <p>おすすめ</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:post' %}">
+              <span class="material-icons-outlined">
+                add_box
+              </span>
+              <p>投稿</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:discover' %}">
+              <span class="material-icons-outlined">
+                new_releases
+              </span>
+              <p>発見</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:myaccount' %}">
+              <span class="material-icons-outlined">
+                account_circle
+              </span>
+              <p>アカウント</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main id="m-friend">
+
+        <div class="m-friend">
+
+          <div class="button">
+            <a href="{% url 'myapp:artist' %}" class="btn-fa"><button>artists</button></a>
+            <p class="btn-ff">friends</p>
+          </div>
+  
+          <section>
+  
+            <div class="post">
+              <div class="post-icon">
+                <img src="{% static 'images/myicon.jpg' %}" alt="myicon" class="icon my">
+                <p>AccountName</p>
+              </div>
+              <div class="post-detail">
+                <img src="{% static 'images/post11.jpg' %}" alt="post11">
+                <div class="post-detail-1">
+                  <div class="sentence">
+                    <p>
+                      SEVENTEEN CAFE 2022 ～WINTER CAMPING～ 」⛄️
+                    </p>
+                    <p class="hashtag">
+                      #SEVENTEEN<br>
+                      #セブチ #セブチカフェ<br>
+                      #seventeencafe
+                    </p>
+                  </div>
+                  <div>
+                    <span class="material-icons-outlined fav" style="font-size: 35px;">
+                      favorite_border
+                    </span>
+                    <span class="material-icons-outlined" style="font-size: 35px;">
+                      bookmark_border
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="post">
+              <div class="post-icon">
+                <img src="{% static 'images/myicon.jpg' %}" alt="myicon" class="icon my">
+                <p>AccountName</p>
+              </div>
+              <div class="post-detail">
+                <img src="{% static 'images/post12.jpg' %}" alt="post12">
+                <div class="post-detail-1">
+                  <div class="sentence">
+                    <p>
+                      𝐵𝐸 𝑇𝐻𝐸 𝑆𝑈𝑁 ,<br><br><br>
+                      SEVENTEEN WORLD TOUR<br>
+                      BE THE SUN in Aichi<br><br>
+                      💎💎
+                    </p>
+                    <p class="hashtag">
+                      #SVT_WORLDTOUR_BETHESUN<br>
+                      #SEVENTEENinAICHI<br>
+                      #BETHESUN_AICHI<br>
+                      #BETHESUNwithSVT
+                    </p>
+                  </div>
+                  <div>
+                    <span class="material-icons-outlined fav" style="font-size: 35px;">
+                      favorite_border
+                    </span>
+                    <span class="material-icons-outlined" style="font-size: 35px;">
+                      bookmark_border
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="post">
+              <div class="post-icon">
+                <img src="{% static 'images/myicon.jpg' %}" alt="myicon" class="icon my">
+                <p>AccountName</p>
+              </div>
+              <div class="post-detail">
+                <img src="{% static 'images/post13.jpg' %}" alt="post13">
+                <div class="post-detail-1">
+                  <div class="sentence">
+                    <p>
+                      📍Waffle cafe ORANGE<br><br>
+                      ウォヌホシ🦊🐯
+                    </p>
+                    <p class="hashtag">
+                      #seventeen #セブチ<br>
+                      #HOSHI #WONWOO
+                      #ウォヌホシ<br>
+                      #聖地巡礼 #wafflecafeorange
+                    </p>
+                  </div>
+                  <div>
+                    <span class="material-icons-outlined fav" style="font-size: 35px;">
+                      favorite_border
+                    </span>
+                    <span class="material-icons-outlined" style="font-size: 35px;">
+                      bookmark_border
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="post">
+              <div class="post-icon">
+                <img src="{% static 'images/myicon.jpg' %}" alt="myicon" class="icon my">
+                <p>AccountName</p>
+              </div>
+              <div class="post-detail">
+                <img src="{% static 'images/post14.jpg' %}" alt="post14">
+                <div class="post-detail-1">
+                  <div class="sentence">
+                    <p>
+                      𝕊𝔼𝕍𝔼ℕ𝕋𝔼𝔼ℕ 𝕄𝕌𝕊𝔼𝕌𝕄💎
+                    </p>
+                    <p class="hashtag">
+                      #seventeenmuseum<br>
+                      #seventeen #セブチ
+                    </p>
+                  </div>
+                  <div>
+                    <span class="material-icons-outlined fav" style="font-size: 35px;">
+                      favorite_border
+                    </span>
+                    <span class="material-icons-outlined" style="font-size: 35px;">
+                      bookmark_border
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="post">
+              <div class="post-icon">
+                <img src="{% static 'images/myicon.jpg' %}" alt="myicon" class="icon my">
+                <p>AccountName</p>
+              </div>
+              <div class="post-detail">
+                <img src="{% static 'images/post15.jpg' %}" alt="post15">
+                <div class="post-detail-1">
+                  <div class="sentence">
+                    <p>
+                      🤍SEVENTEEN CAFE 2022<br>
+                      ～SUNSET RESORT～🤍<br><br>
+                      𓂃☕️⋆͛*ﾟ
+                    </p>
+                    <p class="hashtag">
+                      #seventeencafe<br>
+                      #seventeen #セブチ<br>
+                      #セブチカフェ
+                    </p>
+                  </div>
+                  <div>
+                    <span class="material-icons-outlined fav" style="font-size: 35px;">
+                      favorite_border
+                    </span>
+                    <span class="material-icons-outlined" style="font-size: 35px;">
+                      bookmark_border
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <footer id="footer">
+      <p id="page-top">
+        <a href="#"><span>Page Top</span></a>
+      </p>
+      <div>2022 &copy; Copyright GotoSaki. All rights reserved.
+        <!-- <address>
+          <span>Discover Artists</span><br>
+          
+        </address>
+        <nav>
+          <ul>
+            <li><a href="{% url 'myapp:home' %}">ホーム</a></li>
+            <li><a href="{% url 'myapp:artist' %}">TL</a></li>
+            <li><a href="{% url 'myapp:recommend' %}">おすすめ</a></li>
+            <li><a href="{% url 'myapp:post' %}">投稿</a></li>
+            <li><a href="{% url 'myapp:discover' %}">発見</a></li>
+            <li><a href="{% url 'myapp:myaccount' %}">アカウント</a></li>
+          </ul>
+        </nav> -->
+      </div>
+    </footer>
+
+
+    <!-- jQueryへのリンク -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- 背景 -->
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+
+  </body>
+
+</html>

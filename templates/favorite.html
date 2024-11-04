@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ja">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FAVORITE</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+
+    <!-- google fonts -->
+    <!-- header -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@700&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <!-- accountname -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,900&display=swap" rel="stylesheet">
+    <!-- h2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+
+    <!-- jQuery本体 CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+
+    <!-- jQuery実行ファイル -->
+    <!-- <script type="text/javascript" src="js/common.js"></script> -->
+
+  </head>
+
+  <body>
+
+    <div id="wrap">
+
+      <nav>
+        <h1>
+          Discover Artists
+        </h1>
+        <ul>
+          <li>
+            <a href="{% url 'myapp:home' %}">
+              <span class="material-icons-outlined">
+                home
+              </span>
+              <p>ホーム</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:artist' %}">
+              <span class="material-icons-outlined">
+                sentiment_very_satisfied
+              </span>
+              <p>TL</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:recommend' %}">
+              <span class="material-icons">
+                manage_search
+              </span>
+              <p>おすすめ</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:post' %}">
+              <span class="material-icons-outlined">
+                add_box
+              </span>
+              <p>投稿</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:discover' %}">
+              <span class="material-icons-outlined">
+                new_releases
+              </span>
+              <p>発見</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:myaccount' %}">
+              <span class="material-icons-outlined">
+                account_circle
+              </span>
+              <p>アカウント</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main id="m-favorite">
+
+        <div class="m-favorite">
+
+          <div class="favorite-post">
+  
+            <h2>SEVENTEEN</h2>
+  
+            <div class="favorite-post-detail">
+  
+              <div class="f-post">
+                <div class="f-post-icon">
+                  <img src="{% static 'images/icon01.jpg' %}" alt="svt" class="f-icon">
+                  <p>SEVENTEEN</p>
+                </div>
+                <div class="f-post-detail">
+                  <img src="{% static 'images/post01.jpg' %}" alt="post01">
+                  <div class="f-post-detail-1">
+                    <div class="f-sentence">
+                      <p>
+                        [17'S 호시] 도쿄돔!! 모두 수고하셨습니다<br>
+                        캐럿들 와줘서 너무 고마워요🥹<br>호랑해🐯🧡
+                      </p>
+                      <p class="f-hashtag">
+                        #NowSVT
+                      </p>
+                    </div>
+                    <div class="f-fb">
+                      <span class="material-icons-outlined f-fav" style="font-size: 20px;">
+                        favorite_border
+                      </span>
+                      <span class="material-icons-outlined f-book" style="font-size: 20px;">
+                        bookmark_border
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="f-post">
+                <div class="f-post-icon">
+                  <img src="{% static 'images/icon01.jpg' %}" alt="svt" class="f-icon">
+                  <p>SEVENTEEN</p>
+                </div>
+                <div class="f-post-detail">
+                  <img src="{% static 'images/post02.jpg' %}" alt="post02">
+                  <div class="f-post-detail-1">
+                    <div class="f-sentence">
+                      <p>
+                        [17'S] SEVENTEEN WORLD TOUR [BE THE SUN] IN AICHI<br>
+                        日本ツアー最終日❕<br>
+                        最高の瞬間を共にしてくれたすべてのCARATのみなさん👏💕<br>
+                        6日間ありがとうございました🥰<br>
+                        これからもぼくたちの光でいてください🌠
+                      </p>
+                      <p class="f-hashtag">
+                        #SVT_WORLDTOUR_BETHESUN<br>
+                        #SEVENTEENinAICHI<br>
+                        #BETHESUN_AICHI<br>
+                        #BETHESUNwithSVT #NowSVT
+                      </p>
+                    </div>
+                    <div class="f-fb">
+                      <span class="material-icons-outlined f-fav" style="font-size: 20px;">
+                        favorite_border
+                      </span>
+                      <span class="material-icons-outlined f-book" style="font-size: 20px;">
+                        bookmark_border
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="f-post">
+                <div class="f-post-icon">
+                  <img src="{% static 'images/icon01.jpg' %}" alt="svt" class="f-icon">
+                  <p>SEVENTEEN</p>
+                </div>
+                <div class="f-post-detail">
+                  <img src="{% static 'images/post05.jpg' %}" alt="post05">
+                  <div class="f-post-detail-1">
+                    <div class="f-sentence">
+                      <p>
+                        [17'S 호시] 캐럿들 새해 복 많이 받으세요🤗🥰
+                      </p>
+                      <p class="f-hashtag">
+                        #우리는_돌고돌아_팀세븐틴<br>
+                        #WeareTEAMSVT
+                      </p>
+                    </div>
+                    <div class="f-fb">
+                      <span class="material-icons-outlined f-fav" style="font-size: 20px;">
+                        favorite_border
+                      </span>
+                      <span class="material-icons-outlined f-book" style="font-size: 20px;">
+                        bookmark_border
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+  
+          <div class="favorite-post">
+  
+            <h2>ENHYPEN</h2>
+  
+            <div class="favorite-post-detail">
+  
+              <div class="f-post">
+                <div class="f-post-icon">
+                  <img src="{% static 'images/icon02.jpg' %}" alt="enhypen" class="f-icon">
+                  <p>ENHYPEN</p>
+                </div>
+                <div class="f-post-detail">
+                  <img src="{% static 'images/post03.jpg' %}" alt="post03">
+                  <div class="f-post-detail-1">
+                    <div class="f-sentence">
+                      <p>
+                        [#今日のENHYPEN] ENHYPEN WORLD TOUR 'MANIFESTO' in JAPAN 最終日💫<br>
+                        ENGENEのみなさんと共にした夢のような時間💕<br>
+                        いつもENHYPENの夢を叶えてくれてありがとうございます🥰
+                      </p>
+                      <p class="f-hashtag">
+                        #ENHYPEN<br>
+                        #EN_WORLDTOUR_MANIFESTO<br>
+                        #MANIFESTO_IN_OSAKA<br>
+                        #KYOCERA_DOME
+                      </p>
+                    </div>
+                    <div class="f-fb">
+                      <span class="material-icons-outlined f-fav" style="font-size: 20px;">
+                        favorite_border
+                      </span>
+                      <span class="material-icons-outlined f-book" style="font-size: 20px;">
+                        bookmark_border
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <footer id="footer">
+      <p id="page-top">
+        <a href="#"><span>Page Top</span></a>
+      </p>
+      <div>2022 &copy; Copyright GotoSaki. All rights reserved.
+        <!-- <address>
+          <span>Discover Artists</span><br>
+          
+        </address>
+        <nav>
+          <ul>
+            <li><a href="{% url 'myapp:home' %}">ホーム</a></li>
+            <li><a href="{% url 'myapp:artist' %}">TL</a></li>
+            <li><a href="{% url 'myapp:recommend' %}">おすすめ</a></li>
+            <li><a href="{% url 'myapp:post' %}">投稿</a></li>
+            <li><a href="{% url 'myapp:discover' %}">発見</a></li>
+            <li><a href="{% url 'myapp:myaccount' %}">アカウント</a></li>
+          </ul>
+        </nav> -->
+      </div>
+    </footer>
+
+
+    <!-- jQueryへのリンク -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- 背景 -->
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+
+  </body>
+
+</html>

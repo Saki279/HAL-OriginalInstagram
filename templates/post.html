@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ja">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>POST</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+
+    <!-- header googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@700&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+
+    <!-- jQuery本体 CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+
+    <!-- jQuery実行ファイル -->
+    <!-- <script type="text/javascript" src="js/common.js"></script> -->
+
+  </head>
+
+  <body>
+
+    <div id="wrap">
+
+      <nav>
+        <h1>
+          Discover Artists
+        </h1>
+        <ul>
+          <li>
+            <a href="{% url 'myapp:home' %}">
+              <span class="material-icons-outlined">
+                home
+              </span>
+              <p>ホーム</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:artist' %}">
+              <span class="material-icons-outlined">
+                sentiment_very_satisfied
+              </span>
+              <p>TL</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:recommend' %}">
+              <span class="material-icons">
+                manage_search
+              </span>
+              <p>おすすめ</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:post' %}">
+              <span class="material-icons-outlined">
+                add_box
+              </span>
+              <p>投稿</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:discover' %}">
+              <span class="material-icons-outlined">
+                new_releases
+              </span>
+              <p>発見</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:myaccount' %}">
+              <span class="material-icons-outlined">
+                account_circle
+              </span>
+              <p>アカウント</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main id="m-post">
+
+        <div class="mm-post">
+
+
+          <!-- <label class="upload-label">
+            ファイルを選択
+            <input type="file" id="example" multiple>
+          </label>
+          <div class="box" id="preview">
+          </div>
+
+          <div class="tabs">
+            <input id="mypost" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="mypost">自分の投稿</label>
+            <input id="discoverpost" type="radio" name="tab_item">
+            <label class="tab_item" for="discoverpost">発見の投稿</label>
+            <div class="tab_content" id="mypost_content">
+              <p class="c-txtsp">
+                <textarea rows="10" cols="60" name="description" id="description" placeholder="投稿文"></textarea>
+                <textarea rows="10" cols="60" name="tagu" id="tagu" placeholder="ハッシュタグ"></textarea>
+                <input type="button" class="reset flat border" id="btn" value="投稿" onclick="btnClick()" >
+              </p>
+            </div>
+            <div class="tab_content" id="discoverpost_content">
+              <p class="c-txtsp">
+                <textarea rows="10" cols="60" name="when" id="when" placeholder="いつ"></textarea>
+                <textarea rows="10" cols="60" name="where" id="where" placeholder="どこで"></textarea>
+                <textarea rows="10" cols="60" name="description" id="description" placeholder="投稿文"></textarea>
+                <input type="button" class="reset flat border" id="btn" value="投稿" onclick="btnClick()" >
+              </p>
+            </div>
+          </div>
+
+        </div> -->
+
+        
+          
+        
+          <!-- <label class="upload-label">
+            ファイルを選択 -->
+            <!-- <input type="file" name="post_pics" id="example" multiple> -->
+          <!-- </label> -->
+          
+          <!-- <input type="submit" value="アップロード"> -->
+
+          <!-- <div class="box" id="preview">
+          </div> -->
+
+        <div class="tabs">
+            <input id="mypost" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="mypost">自分の投稿</label>
+            <input id="discoverpost" type="radio" name="tab_item">
+            <label class="tab_item" for="discoverpost">発見の投稿</label>
+            <div class="tab_content" id="mypost_content">
+              <p class="c-txtsp">
+                <form method="post" action="{% url 'myapp:post' %}" enctype="multipart/form-data">{% csrf_token %}
+                  {{ form.post_image }}<br>
+                  {{ form.content }}<br>
+                  {{ form.tagu }}
+                  <input type="submit" class="reset flat border" id="btn" value="投稿" >
+                </form>
+              </p>
+            </div>
+            <div class="tab_content" id="discoverpost_content">
+              <p class="c-txtsp">
+                {{ post_form.post_image }}
+                {{ post_form.when }}<br>
+                {{ post_form.where }}<br>
+                {{ post_form.content }}
+                <input type="submit" class="reset flat border" id="btn" value="投稿" >
+              </p>
+            </div>
+        </div>
+
+      </div>
+
+      </main>
+
+    </div>
+
+    <footer id="footer">
+      <p id="page-top">
+        <a href="#"><span>Page Top</span></a>
+      </p>
+      <div>
+        <!-- <address>
+          <span>Discover Artists</span><br> -->
+        2022 &copy; Copyright GotoSaki. All rights reserved.
+        <!-- </address>
+        <nav>
+          <ul>
+            <li><a href="{% url 'myapp:home' %}">ホーム</a></li>
+            <li><a href="{% url 'myapp:artist' %}">TL</a></li>
+            <li><a href="{% url 'myapp:recommend' %}">おすすめ</a></li>
+            <li><a href="{% url 'myapp:post' %}">投稿</a></li>
+            <li><a href="{% url 'myapp:discover' %}">発見</a></li>
+            <li><a href="{% url 'myapp:myaccount' %}">アカウント</a></li>
+          </ul>
+        </nav> -->
+      </div>
+    </footer>
+
+
+    <!-- jQueryへのリンク -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- 背景 -->
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+
+    </div>
+
+  </body>
+
+</html>

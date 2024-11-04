@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ja">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HOME</title>
+
+
+
+    <!-- header googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@700&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+
+
+    <!-- jQuery本体 CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+
+    <!-- jQuery実行ファイル -->
+    <!-- <script type="text/javascript" src="js/common.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+
+
+
+  </head>
+
+  <body>
+
+    <div id="wrap">
+
+      <nav>
+        <h1>
+          Discover Artists
+        </h1>
+        <ul>
+          <li>
+            <a href="{% url 'myapp:home' %}">
+              <span class="material-icons-outlined">
+                home
+              </span>
+              <p>ホーム</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:artist' %}">
+              <span class="material-icons-outlined">
+                sentiment_very_satisfied
+              </span>
+              <p>TL</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:recommend' %}">
+              <span class="material-icons">
+                manage_search
+              </span>
+              <p>おすすめ</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:post' %}">
+              <span class="material-icons-outlined">
+                add_box
+              </span>
+              <p>投稿</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:discover' %}">
+              <span class="material-icons-outlined">
+                new_releases
+              </span>
+              <p>発見</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'myapp:myaccount' %}">
+              <span class="material-icons-outlined">
+                account_circle
+              </span>
+              <p>アカウント</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <main id="m-home">
+
+        <div class="m-home">
+
+          <section>
+  
+            <div class="slider3-wrap">
+              <ul class="slider-3" id="js-slider-3">
+                <li>
+                  <div class="slide-img">
+                    <img src="{% static 'images/slider01.jpg' %}" alt="slider01">
+                  </div>
+                </li>
+                <li>
+                  <div class="slide-img">
+                    <img src="{% static 'images/slider02.jpg' %}" alt="slider02">
+                  </div>
+                </li>
+                <li>
+                  <div class="slide-img">
+                    <img src="{% static 'images/slider03.jpg' %}" alt="slider03">
+                  </div>
+                </li>
+                <li>
+                  <div class="slide-img">
+                    <img src="{% static 'images/slider04.jpg' %}" alt="slider04">
+                  </div>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="news">
+  
+              <h2>
+                NEWS
+              </h2>
+  
+              <div class="animate-wrap">
+  
+                <div class="animate">
+                  <div class="topic">
+                    <figure>
+                      <img src="{% static 'images/news01.jpg' %}" alt="news01">
+                    </figure>
+                    <h3>
+                      BSS
+                    </h3>
+                    <p>
+                      SEVENTEENのスペシャル<br>ユニット
+                      BSS("ブソクスン")が<br>
+                      2月6日に1stシングル<br>「SECOND WIND」でカムバ
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="animate">
+                  <div class="topic">
+                    <figure>
+                      <img src="{% static 'images/news02.jpg' %}" alt="news02">
+                    </figure>
+                    <h3>
+                      SEVENTEEN
+                    </h3>
+                    <p>
+                      2023 SVT 7TH FAN MEETING<br>
+                      < SEVENTEEN in<br>CARAT LAND ><br>
+                      オフラインチケット予約開始!
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="animate">
+                  <div class="topic">
+                    <figure>
+                      <img src="{% static 'images/news03.jpg' %}" alt="news03">
+                    </figure>
+                    <h3>
+                      ENHYPEN
+                    </h3>
+                    <p>
+                      ENHYPEN WORLD TOUR<br>
+                      'MANIFESTO' in JAPAN<br>
+                      追加公演決定!
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="animate">
+                  <div class="topic">
+                    <figure>
+                      <img src="{% static 'images/news04.jpg' %}" alt="news04">
+                    </figure>
+                    <h3>
+                      IVE
+                    </h3>
+                    <p>
+                      初のファンコンサート<br>
+                      IVE THE FIRST FAN CONCERT<br>
+                      "The Prom Queens" IN JAPAN<br>
+                      開催決定!
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="animate">
+                  <div class="topic">
+                    <figure>
+                      <img src="{% static 'images/news05.jpg' %}" alt="news05">
+                    </figure>
+                    <h3>
+                      TOMORROW X TOGETHER
+                    </h3>
+                    <p>
+                      TOMORROW X TOGETHER<br>
+                      WORLD TOUR<br>< ACT:SWEET MIRAGE ><br>
+                      日本公演の詳細が決定!
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="animate">
+                  <div class="topic">
+                    <figure>
+                      <img src="{% static 'images/news06.jpg' %}" alt="news06">
+                    </figure>
+                    <h3>
+                      ITZY
+                    </h3>
+                    <p>
+                      ITZY THE 1ST WORLD TOUR<br>
+                      < CHECKMATE >チケット完売<br>
+                      追加公演が決定
+                    </p>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </section>
+
+        </div>
+
+
+      </main>
+
+    </div>
+
+    <footer id="footer">
+      <p id="page-top">
+        <a href="#"><span>Page Top</span></a>
+      </p>
+      <div>2022 &copy; Copyright GotoSaki. All rights reserved.
+        <!-- <address>
+          <span>Discover Artists</span><br>
+          
+        </address>
+        <nav>
+          <ul>
+            <li><a href="{% url 'myapp:home' %}">ホーム</a></li>
+            <li><a href="{% url 'myapp:artist' %}">TL</a></li>
+            <li><a href="{% url 'myapp:recommend' %}">おすすめ</a></li>
+            <li><a href="{% url 'myapp:post' %}">投稿</a></li>
+            <li><a href="{% url 'myapp:discover' %}">発見</a></li>
+            <li><a href="{% url 'myapp:myaccount' %}">アカウント</a></li>
+          </ul>
+        </nav> -->
+      </div>
+    </footer>
+
+
+    <!-- jQueryへのリンク -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- スライドショー -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- 背景 -->
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+
+  </body>
+
+</html>

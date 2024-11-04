@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ja">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LOGIN</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=DotGothic16&family=Luckiest+Guy&family=M+PLUS+Rounded+1c:wght@900&family=Ubuntu:wght@700&family=Yusei+Magic&family=Zen+Kaku+Gothic+New:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@700&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- jQuery本体 CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+
+    <!-- jQuery実行ファイル -->
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+
+  </head>
+
+  <body class="backcolor">
+
+    <div>
+
+      <header>
+        Discover Artists
+      </header>
+  
+      <main id="m-index">
+  
+        <div class="signin">
+          <p class="sign" align="center">LOGIN</p>
+          <form class="form1" method="post" action="{% url 'myapp:index' %}">{% csrf_token %}
+            {{ account_form.as_table }}
+            <input class="un " type="text" align="center" placeholder="Username" name="username">
+            <input class="pass" type="password" align="center" placeholder="Password" name="password">
+            <input type="submit" class="login" value="Login" align="center">
+            <p class="forgot" align="center"><a href="{% url 'myapp:register' %}">Forgot Password?</a></p>
+          </form>
+        </div>
+  
+      </main>
+  
+      <footer class="copy">
+        <div>
+          2022 &copy; Copyright GotoSaki. All rights reserved.
+        </div>
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>

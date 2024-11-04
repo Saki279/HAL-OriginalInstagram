@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ja">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sign up</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Ubuntu:wght@700&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+    <!-- jQuery本体 CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script> -->
+
+    <!-- jQuery実行ファイル -->
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+
+  </head>
+
+  <body class="backcolor">
+
+    <header>
+      Discover Artists
+    </header>
+
+    <main id="m-signup">
+
+      {% if AccountCreate %}
+       <h1>登録完了!</h1>
+
+      {% else %}
+
+        <div class="signin">
+          <p class="sign1" align="center">Sign up</p>
+          <form class="form1" enctype="multipart/form-data" method="post">{% csrf_token %}
+            {{ account_form.as_table }}
+            {{ add_account_form.as_table }}
+            <tr><td></td><td>
+
+            <!-- <input class="un " type="text" align="center" placeholder="Username">
+            <input class="pass" type="password" align="center" placeholder="Password">
+            <input class="mail" type="email" align="center" placeholder="Email"> -->
+            <input class="create" type="submit" name="" value="登録">
+            </td></tr>
+            <p class="have" align="center"><a href="{% url 'myapp:index' %}">Already have an account?</a></p>
+          </form>
+        </div>
+
+      {% endif %}
+
+    </main>
+
+    <footer class="copy">
+      <div>
+        2022 &copy; Copyright GotoSaki. All rights reserved.
+      </div>
+    </footer>
+
+  </body>
+
+</html>
