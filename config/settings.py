@@ -31,7 +31,7 @@ SECRET_KEY = 'jwg5js*!zjsi6h0(us_&*8uiiyi1#q^cv-2ewzcnjrcr3t9@tu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['disoverartists.onrender.com']
 
 
 # Application definition
